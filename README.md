@@ -1,4 +1,4 @@
-# Railway Ticket Management System (RTMS) - Animated Version
+# Railway Ticket Management System (RTMS)
 
 An upgraded version of the Railway Ticket Management System with:
 
