@@ -1,0 +1,11 @@
+{% extends "index.html" %}{% block content %}
+<h3>Available Trains</h3>
+<ul>
+{% for train in trains %}
+  <li>{{ train.name }} - {{ train.source }} to {{ train.destination }} 
+    <a href="/book/{{ train.id }}">[Book]</a>
+  </li>
+{% endfor %}
+</ul>
+<a href="/mybookings">My Bookings</a> | <a href="/logout">Logout</a>
+{% endblock %}

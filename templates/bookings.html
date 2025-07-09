@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>My Bookings</h2>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li style="color: green;">{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        
+<ul>
+{% for b in bookings %}
+  <li>{{ b.name }} - {{ b.source }} to {{ b.destination }} 
+    <a href="/cancel/{{ b.id }}">[Cancel]</a>
+  </li>
+{% endfor %}
+</ul>
+<a href="/dashboard">Back to Dashboard</a>
+
+    </div>
+</body>
+</html>
